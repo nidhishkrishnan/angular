@@ -1,0 +1,21 @@
+<div class="col-sm-6 offset-sm-2">
+  <h1>Student Details</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input [(ngModel)]="student.name" type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input [(ngModel)]="student.email" type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+
+        <label for="address">Address</label>
+        <textarea [(ngModel)]="student.address" name="description" class="form-control" id="address" aria-describedby="descHelp"></textarea>
+
+      </div>
+    </form>
+    <button class="btn btn-primary" (click)="addStudent(student)">Add Student</button>
+  </div>
+</div>
+
+
