@@ -4,7 +4,7 @@
     <form>
       <div class="form-group">
         <label for="name">Name</label>
-        <input [(ngModel)]="student.name" type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your name">
+        <input autocomplete="off" [(ngModel)]="student.name" type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your name">
 
         <label for="email">Email</label>
         <input [(ngModel)]="student.email" type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
