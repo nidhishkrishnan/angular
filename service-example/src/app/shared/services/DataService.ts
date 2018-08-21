@@ -1,11 +1,11 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {Student} from '../model/Student';
 import {LoggerService} from './LoggerService';
-import {Output} from '@angular/core/src/metadata/directives';
 
 // @Injectable({
 //   providedIn: 'root'
 // })
+@Injectable()
 export class DataService {
   public studentsAdded: EventEmitter<Student[]> = new EventEmitter<Student[]>();
 
@@ -15,15 +15,14 @@ export class DataService {
       new Student('Sunny', 'sunny@gmail.com', 'HJKL')
   ];
 
-  constructor() { }
+  constructor(private logger: LoggerService) { }
 
   public getAllStudents():Array<Student> {
     return this.students.slice();
   }
   public addStudents(student: Student) {
-    console.log('ssssss::', student);
     this.students.push(student);
+    this.logger.info('item pushed successfully......')
     this.studentsAdded.emit(this.students.slice());
-
   }
 }
