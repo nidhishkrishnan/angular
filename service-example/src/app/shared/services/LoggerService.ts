@@ -1,4 +1,4 @@
-export class Logger {
+export class LoggerService {
 
   info(message?: any, ...optionalParams) {
     console.info(message, optionalParams);

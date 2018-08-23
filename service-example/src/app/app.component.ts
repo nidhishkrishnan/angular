@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Logger} from './shared/services/Logger';
+import {LoggerService} from './shared/services/LoggerService';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import {Logger} from './shared/services/Logger';
 export class AppComponent {
   title = 'app';
 
-  constructor(private log:Logger) {
+  constructor(private log: LoggerService) {
   }
 
   showLog() {
