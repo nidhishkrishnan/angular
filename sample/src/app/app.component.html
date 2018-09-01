@@ -1,8 +1,12 @@
 <div class="col-md-4 mt-2">
-  <app-child1></app-child1>
-</div>
-<div class="col-md-4 mt-2">
-  <app-child2></app-child2>
+  <app-server-create (addNewServer)="addServer($event)"></app-server-create>
 </div>
 
-
+<div *ngFor="let server of servers; let index = index">
+  <div class="col-md-4 mt-2">
+    <div class="card">
+      <div class="card-header">{{server.name}}</div>
+      <div class="card-body">{{server.description}} <app-server-delete [serverIndex]="index" (removeServer)="deleteServer($event)"></app-server-delete></div>
+    </div>
+  </div>
+</div>
