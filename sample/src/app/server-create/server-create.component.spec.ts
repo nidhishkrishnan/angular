@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Child2Component } from './child2.component';
+import { ServerDeleteComponent } from './server-create.component';
 
-describe('Child2Component', () => {
-  let component: Child2Component;
-  let fixture: ComponentFixture<Child2Component>;
+describe('ServerDeleteComponent', () => {
+  let component: ServerDeleteComponent;
+  let fixture: ComponentFixture<ServerDeleteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Child2Component ]
+      declarations: [ ServerDeleteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Child2Component);
+    fixture = TestBed.createComponent(ServerDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
