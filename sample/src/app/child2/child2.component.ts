@@ -12,8 +12,7 @@ export class Child2Component implements OnInit {
   ngOnInit() {
   }
 
-  public addServer() {
-    console.log('Add Server');
+  public removeServer() {
+    console.log('Server Removed');
   }
-
 }

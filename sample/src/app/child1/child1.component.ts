@@ -12,4 +12,7 @@ export class Child1Component implements OnInit {
   ngOnInit() {
   }
 
+  public addServer() {
+    console.log('Add Server');
+  }
 }
