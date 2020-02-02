@@ -2,7 +2,9 @@
 
 <ul class="nav nav-tabs">
 
-  <li [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" ><a routerLink="/dashboard">Dashboard</a></li>
-  <li [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" ><a routerLinkActive="active" routerLink="/players">Players</a></li>
+  <li [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"><a routerLink="/dashboard">Dashboard</a></li>
+  <li [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+    <a [routerLink]="['/players', 4, 'view']">Players</a>
+  </li>
 </ul>
 <router-outlet></router-outlet>
