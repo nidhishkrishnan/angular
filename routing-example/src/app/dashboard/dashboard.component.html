@@ -1,5 +1,5 @@
 
 <h3>Dashboard works!</h3>
-<a [routerLink]= "['/players', 6, 'view']" >View players</a>
+<a [routerLink]= "['/players', 6, 'view']" [queryParams]="{id:125, name:'Manu'}" [fragment]="'testing123'">View players</a>
 <hr>
 <a href="javascript:void(0)" (click)="viewPlayers(9)">View players (Script)</a>
