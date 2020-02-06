@@ -6,7 +6,31 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run 
+
+
+```angular2html
+<!-- Calling routerLink inline-->
+<a [routerLink]= "['/players', 6, 'view']" 
+   [queryParams]="{id:125, name:'Manu'}" 
+   [fragment]="'testing123'">
+   View players
+</a>
+
+<!-- Calling routerLink from angular function-->
+<a href="javascript:void(0)" 
+   (click)="viewPlayers(9)">
+   View players (Script)
+</a>
+````
+
+
+
+
+
+
+
+` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
