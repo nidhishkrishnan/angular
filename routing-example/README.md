@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run 
 
 
-```angular2html
+```html
 <!-- Calling routerLink inline-->
 <a [routerLink]= "['/players', 6, 'view']" 
    [queryParams]="{id:125, name:'Manu'}" 
