@@ -2,31 +2,47 @@
 
 # RoutingExample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-## Development server
+##### Routing function
+```javascript
+const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'players', component: PlayersComponent },
+  { path: 'players/:id/view', component: PlayersComponent },
+];
 
-Run 
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
+})
+```
 
-
+##### Calling routerLink inline
 ```html
-<!-- Calling routerLink inline-->
 <a [routerLink]= "['/players', 6, 'view']" 
    [queryParams]="{id:125, name:'Manu'}" 
    [fragment]="'testing123'">
    View players
 </a>
+```
 
-<!-- Calling routerLink from angular function-->
+##### Calling navigation from angular typescript function
+```html
+http://localhost:4200/players/9/view?id=444&name=Jacob#testing
+```
+```html
 <a href="javascript:void(0)" 
    (click)="viewPlayers(9)">
    View players (Script)
 </a>
-````
-
-
-
-
+```
+```javascript
+constructor(private router: Router) { }
+viewPlayers(id): void {
+  this.router.navigate(['/players', id, 'view'], {queryParams: {id: 444, name: 'Jacob'}, fragment: 'testing'});
+}
+```
 
 
 
