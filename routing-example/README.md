@@ -3,7 +3,7 @@
 # RoutingExample
 
 
-##### Routing function
+### Routing function
 ```javascript
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -18,7 +18,7 @@ const routes: Routes = [
 })
 ```
 
-##### Calling routerLink inline
+### Calling routerLink inline
 ```html
 <a [routerLink]= "['/players', 6, 'view']" 
    [queryParams]="{id:125, name:'Manu'}" 
@@ -27,7 +27,7 @@ const routes: Routes = [
 </a>
 ```
 
-##### Calling navigation from angular typescript function
+### Calling navigation from angular typescript function
 ```html
 http://localhost:4200/players/9/view?id=444&name=Jacob#testing
 ```
