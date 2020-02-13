@@ -20,6 +20,9 @@ const routes: Routes = [
 
 ### Calling routerLink inline
 ```html
+http://localhost:4200/players/6/view?id=125&name=Manu#testing123
+```
+```html
 <a [routerLink]= "['/players', 6, 'view']" 
    [queryParams]="{id:125, name:'Manu'}" 
    [fragment]="'testing123'">
