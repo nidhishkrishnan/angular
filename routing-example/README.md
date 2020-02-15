@@ -43,6 +43,8 @@ http://localhost:4200/players/9/view?id=444&name=Jacob#testing
 ```javascript
 constructor(private router: Router) { }
 viewPlayers(id): void {
-  this.router.navigate(['/players', id, 'view'], {queryParams: {id: 444, name: 'Jacob'}, fragment: 'testing'});
+  this.router.navigate(['/players', id, 'view'], 
+                       {queryParams: {id: 444, name: 'Jacob'}, 
+                       fragment: 'testing'});
 }
 ```
