@@ -95,3 +95,40 @@ constructor(private route: ActivatedRoute) { }
     );
   }
 ```
+
+### Setting up child routes
+
+```javascript
+const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'players', component: PlayersComponent },
+  { path: 'players/:id/view', component: PlayersComponent },
+];
+
+TO
+
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'players', children: [
+      {
+        path: '',
+        component: PlayersComponent
+      },
+      {
+        path: ':id/view',
+        component: PlayersComponent
+      }
+    ]
+  }
+];
+```
