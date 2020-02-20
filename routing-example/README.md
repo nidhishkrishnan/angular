@@ -59,10 +59,19 @@ constructor(private router: Router) { }
 viewPlayers(id): void {
   this.router.navigate(['/players', id, 'view'], 
                        {queryParams: {id: 444, name: 'Jacob'}, 
-                       fragment: 'testing'});
+                        fragment: 'testing'
+                       });
 }
 ```
 
+### When we want to merge the query params
+
+```javascript
+this.router.navigate(['players', 90, 'view'], 
+                     {queryParamsHandling: 'merge', 
+                      queryParams: {place: 'Berlin', name: 'Sachin'}
+                     });
+```
 
 ### Retrieving Query Parameters (queryParams, fragment, path-params)
 

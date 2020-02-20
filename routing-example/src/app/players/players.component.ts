@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
   selector: 'app-players',
@@ -8,7 +8,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 })
 export class PlayersComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     console.log(this.route.snapshot.queryParams); // for getting the queryParams values
@@ -35,5 +35,10 @@ export class PlayersComponent implements OnInit {
       }
     );
   }
+
+  viewPlayers() {
+    this.router.navigate(
+      ['players', 90, 'view'], {queryParamsHandling: 'merge', queryParams: {place: 'Berlin', name: 'Sachin'}});
+    }
 
 }
