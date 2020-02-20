@@ -58,8 +58,9 @@ http://localhost:4200/players/9/view?id=444&name=Jacob#testing
 constructor(private router: Router) { }
 viewPlayers(id): void {
   this.router.navigate(['/players', id, 'view'], 
-                       {queryParams: {id: 444, name: 'Jacob'}, 
-                        fragment: 'testing'
+                       {
+                          queryParams: {id: 444, name: 'Jacob'}, 
+                          fragment: 'testing'
                        });
 }
 ```
@@ -68,8 +69,9 @@ viewPlayers(id): void {
 
 ```javascript
 this.router.navigate(['players', 90, 'view'], 
-                     {queryParamsHandling: 'merge', 
-                      queryParams: {place: 'Berlin', name: 'Sachin'}
+                     {
+                        queryParamsHandling: 'merge', 
+                        queryParams: {place: 'Berlin', name: 'Sachin'}
                      });
 ```
 
