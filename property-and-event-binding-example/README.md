@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Property Binding (@Input) and Event Binding (@Output)
 
 ### server-create.component.ts - @Output
-```
+```javascript
 import {Component, EventEmitter, Output} from '@angular/core';
 import {Servers} from '../shared/servers';
 
@@ -34,13 +34,13 @@ export class ServerCreateComponent {
 
 ### server-create.component.html
 
-```
+```html
 <button class="btn btn-primary btn-block" (click)="createNewServer()">Add Server</button>
 ```
 
 ### server-delete.component.ts - @Input and @Output
 
-```
+```javascript
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
@@ -66,12 +66,12 @@ export class ServerDeleteComponent implements OnInit {
 
 ### server-delete.component.html
 
-```
+```html
 <button class="btn btn-sm btn-danger" (click)="deleteServer()" >X</button>
 ```
 
 ### app.component.ts - @Input and @Output
-```
+```javascript
 import {Component, OnInit} from '@angular/core';
 import {Servers} from './shared/servers';
 
@@ -99,7 +99,7 @@ export class AppComponent implements OnInit {
 
 ### app.component.html
 
-```
+```html
 <div class="col-md-4 mt-2">
   <app-server-create (addNewServer)="addServer($event)"></app-server-create>
 </div>
