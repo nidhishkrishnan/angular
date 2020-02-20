@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   }
 
   viewPlayers(id): void {
-    this.router.navigate(['/players', id, 'view']);
+    this.router.navigate(['/players', id, 'view'], {queryParams: {id: 444, name: 'Jacob'}, fragment: 'testing'});
   }
 
 }
