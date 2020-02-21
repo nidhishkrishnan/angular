@@ -65,7 +65,7 @@ viewPlayers(id): void {
 }
 ```
 
-### When we want to merge the query params
+### When we want to merge or preserve the query params
 
 ```javascript
 this.router.navigate(['players', 90, 'view'], 
