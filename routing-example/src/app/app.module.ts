@@ -5,14 +5,17 @@ import { AppComponent } from './app.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {AppRoutingModule} from './app.routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app.routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayersComponent,
     PlayerDetailsComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
