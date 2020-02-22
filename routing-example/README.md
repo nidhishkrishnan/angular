@@ -162,7 +162,7 @@ const routes: Routes = [
     component: PageNotFoundComponent
   },
   {
-    path: '**',
+    path: '**', // <----------- Use '**' wildcard as catch-all to lazy loaded module
     redirectTo: 'not-found',
     pathMatch: 'full'
   }
