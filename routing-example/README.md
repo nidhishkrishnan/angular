@@ -144,7 +144,7 @@ const routes: Routes = [
 ];
 ```
 
-### For display page not found for any in valid routing
+### For display page-not-found for any invalid routing path
 
 ```javascript
 const routes: Routes = [
