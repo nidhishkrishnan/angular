@@ -29,6 +29,20 @@ http://localhost:4200/players/6/view?id=125&name=Manu#testing123
    View players
 </a>
 ```
+```html
+http://localhost:4200/dashboard
+http://localhost:4200/players
+```
+
+```html
+<li [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+  <a routerLink="/dashboard">Dashboard</a>
+</li>
+
+<li [routerLinkActiveOptions]="{ exact: false }" routerLinkActive="active">
+  <a [routerLink]="['/players']">Players</a>
+</li>
+```
 
 ### Calling navigation from angular typescript function
 ```html
