@@ -29,4 +29,5 @@
   </tbody>
 </table>
 
-<a [routerLink]= "['/dashboard']" >View Dashboard</a>
+<a [routerLink]= "['/dashboard']" >View Dashboard</a> |
+<a [routerLink]= "['/players', 8, 'view']" [queryParams]="{id:999, name:'Sunny'}" [fragment]="'testing999'">View players</a>
