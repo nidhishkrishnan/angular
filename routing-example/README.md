@@ -143,3 +143,28 @@ const routes: Routes = [
   }
 ];
 ```
+
+### For display page not found for any in valid routing
+
+```javascript
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'not-found',
+    component: PageNotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
+    pathMatch: 'full'
+  }
+];
+```
