@@ -6,6 +6,7 @@ import { PlayersComponent } from './players/players.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
 import { PlayerTeamsComponent } from './player-teams/player-teams.component';
+import { AuthGuard } from './auth-guard.service';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'players', component: PlayersComponent, children: [
+    path: 'players', component: PlayersComponent, canActivate: [AuthGuard], children: [
       {
         path: 'details',
         component: PlayerDetailsComponent
