@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlayersComponent } from './players/players.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PlayerDetailsComponent } from './player-details/player-details.component';
+import { PlayerTeamsComponent } from './player-teams/player-teams.component';
 
 const routes: Routes = [
   {
@@ -16,15 +18,20 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'players', children: [
+    path: 'players', component: PlayersComponent, children: [
       {
-        path: '',
-        component: PlayersComponent
+        path: 'details',
+        component: PlayerDetailsComponent
       },
       {
-        path: ':id/view',
-        component: PlayersComponent
-      }
+        path: 'teams',
+        component: PlayerTeamsComponent
+      },
+      {
+        path: '',
+        redirectTo: 'details',
+        pathMatch: 'full'
+      },
     ]
   },
   {

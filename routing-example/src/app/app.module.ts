@@ -7,6 +7,7 @@ import { PlayerDetailsComponent } from './player-details/player-details.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app.routing.module';
+import { PlayerTeamsComponent } from './player-teams/player-teams.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app.routing.module';
     PlayersComponent,
     PlayerDetailsComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PlayerTeamsComponent
   ],
   imports: [
     BrowserModule,

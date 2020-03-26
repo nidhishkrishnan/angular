@@ -1,34 +1,20 @@
-<table class="table col-lg-4">
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Handle</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-  </tr>
-  <tr>
-    <th scope="row">3</th>
-    <td>Larry</td>
-    <td>the Bird</td>
-    <td>@twitter</td>
-  </tr>
-  </tbody>
-</table>
-
+<div class="row">
+  <div class="col-md-3">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <ul class="nav nav-pills nav-stacked">
+          <li [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"><a routerLink="/players/details">Player Details</a></li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <ul class="nav nav-pills nav-stacked">
+          <li [routerLinkActiveOptions]="{ exact: false }" routerLinkActive="active"><a [routerLink]="['/players/teams']">Teams</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+</div>
 <a [routerLink]= "['/dashboard']" >View Dashboard</a> |
 <a [routerLink]= "['/players', 8, 'view']" [queryParams]="{id:999, name:'Sunny'}" [fragment]="'testing999'">View players</a> |
 <a href="javascript:void(0)" (click)="viewPlayers()">View players (Script)</a>
