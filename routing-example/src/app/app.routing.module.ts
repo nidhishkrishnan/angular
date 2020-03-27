@@ -19,7 +19,12 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'players', component: PlayersComponent, canActivate: [AuthGuard], children: [
+    path: 'players',
+    component: PlayersComponent,
+    // canActivate: [AuthGuard]
+    canActivateChild: [AuthGuard],
+
+    children: [
       {
         path: 'details',
         component: PlayerDetailsComponent
@@ -27,12 +32,7 @@ const routes: Routes = [
       {
         path: 'teams',
         component: PlayerTeamsComponent
-      },
-      {
-        path: '',
-        redirectTo: 'details',
-        pathMatch: 'full'
-      },
+      }
     ]
   },
   {

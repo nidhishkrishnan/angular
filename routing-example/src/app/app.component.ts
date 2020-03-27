@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthService} from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Routing Sample';
+  constructor(private authService: AuthService) {}
+  onLogin() {
+    this.authService.login();
+  }
+  onLogout() {
+    this.authService.logout();
+  }
 }

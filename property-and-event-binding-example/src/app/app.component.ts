@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Servers} from './shared/servers';
+import { Component, OnInit } from '@angular/core';
+import { Servers } from './shared/servers';
 
 @Component({
   selector: 'app-root',
